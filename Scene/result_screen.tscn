@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://comton3oij3me"]
+
+[ext_resource type="Script" path="res://Scene/result_screen.gd" id="1_v5ef5"]
+
+[node name="ResultScreen" type="Node2D"]
+script = ExtResource("1_v5ef5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_top = 100.0
+offset_right = 411.0
+offset_bottom = 169.0
+
+[node name="ShowP1" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Player 1 score : "
+
+[node name="P1Score" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "0
+"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+offset_left = 732.365
+offset_top = 475.0
+offset_right = 1154.0
+offset_bottom = 544.0
+size_flags_horizontal = 8
+
+[node name="ShowP2" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Player 1 score : "
+
+[node name="P2Score" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "0
+"
+
+[node name="Conclusion" type="Label" parent="."]
+offset_left = 328.0
+offset_top = 254.0
+offset_right = 828.0
+offset_bottom = 323.0
+theme_override_font_sizes/font_size = 50
+text = "The Winner areeee!!!"
+horizontal_alignment = 1
+vertical_alignment = 1

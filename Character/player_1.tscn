@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbdmvjvsanpbk"]
+
+[ext_resource type="Script" path="res://Character/player_1.gd" id="1_qtgbe"]
+[ext_resource type="Texture2D" uid="uid://c463tcydsvy1g" path="res://Asset/Characters/Player.png" id="1_uhrws"]
+[ext_resource type="Texture2D" uid="uid://bqdulah10k23g" path="res://Asset/Item/GunWater_lv1.png" id="3_6oay4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gn8bm"]
+radius = 82.0
+height = 473.0
+
+[node name="Player_1" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_qtgbe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_uhrws")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 22.5)
+shape = SubResource("CapsuleShape2D_gn8bm")
+
+[node name="Weapon" type="Sprite2D" parent="."]
+position = Vector2(94, 63)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_6oay4")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(184, 34)
+
+[node name="Cooldown" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
