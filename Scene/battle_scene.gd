@@ -12,8 +12,8 @@ var minute : int
 var second : int
 
 func _ready():
-	minute = 0
-	second = 10
+	minute = 2
+	second = 30
 
 func _process(delta):
 	time()
