@@ -20,11 +20,12 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "0
 "
+vertical_alignment = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
-offset_left = 732.365
+offset_left = 685.455
 offset_top = 475.0
-offset_right = 1154.0
+offset_right = 1107.09
 offset_bottom = 544.0
 size_flags_horizontal = 8
 
@@ -38,6 +39,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "0
 "
+vertical_alignment = 1
 
 [node name="Conclusion" type="Label" parent="."]
 offset_left = 328.0

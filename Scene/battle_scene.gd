@@ -24,8 +24,11 @@ func _process(delta):
 	
 func time():
 	if second == 0:
-		minute -= 1
-		second = 60
+		if minute > 0:
+			minute -= 1
+			second = 60
+		else:
+			$TimeFight.stop()
 
 func _on_time_fight_timeout():
 	second -= 1
