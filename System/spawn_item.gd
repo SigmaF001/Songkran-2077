@@ -1,11 +1,17 @@
 extends Node2D
 
+@onready var gun_lv1 = preload("res://Asset/gun.png")
 
-# Called when the node enters the scene tree for the first time.
+var data_list = ["gun_lv1", "Tomyum"]
+
 func _ready():
 	pass # Replace with function body.
+	
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	data_list.shuffle()
+	var item = data_list[0]
+	var spawn_item = item.instantiate()
+
+func _on_timer_timeout():
+	pass # Replace with function body.
