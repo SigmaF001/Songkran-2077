@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var p_shooter : CharacterBody2D
+
 var speed = 1000
 var direction = Vector2.ZERO
 
@@ -14,6 +16,7 @@ func _on_timer_timeout():
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("player"):
+		p_shooter.score += 5
 		body.score -= 5
 		print("Hit the player.")
 		queue_free()

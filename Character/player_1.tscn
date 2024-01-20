@@ -8,8 +8,9 @@
 radius = 82.0
 height = 473.0
 
-[node name="Player_1" type="CharacterBody2D" groups=["player"]]
+[node name="Player_1" type="CharacterBody2D" node_paths=PackedStringArray("player_character") groups=["player"]]
 script = ExtResource("1_qtgbe")
+player_character = NodePath(".")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_uhrws")

@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var player_character : CharacterBody2D
 @export var speed : float = 300.0
 
 @onready var sprite = $Sprite2D
@@ -65,6 +66,7 @@ func shoot():
 			shoot_bullet.direction = Vector2.LEFT
 		if sprite.flip_h == false:
 			shoot_bullet.direction = Vector2.RIGHT
+		shoot_bullet.p_shooter = player_character
 		owner.add_child(shoot_bullet)
 		shoot_bullet.global_position = $Marker2D.global_position
 		$Cooldown.start()
@@ -73,3 +75,4 @@ func shoot():
 
 func _on_cooldown_timeout():
 	shoot_cooldown = false
+

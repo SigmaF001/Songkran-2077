@@ -23,9 +23,9 @@ text = "0
 vertical_alignment = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
-offset_left = 685.455
+offset_left = 646.395
 offset_top = 475.0
-offset_right = 1107.09
+offset_right = 1068.03
 offset_bottom = 544.0
 size_flags_horizontal = 8
 
