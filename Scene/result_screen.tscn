@@ -23,9 +23,9 @@ text = "0
 vertical_alignment = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
-offset_left = 646.395
+offset_left = 612.355
 offset_top = 475.0
-offset_right = 1068.03
+offset_right = 1081.35
 offset_bottom = 544.0
 size_flags_horizontal = 8
 
@@ -37,8 +37,7 @@ text = "Player 1 score : "
 [node name="P2Score" type="Label" parent="HBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "0
-"
+text = "900"
 vertical_alignment = 1
 
 [node name="Conclusion" type="Label" parent="."]
