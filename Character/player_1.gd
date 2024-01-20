@@ -12,6 +12,7 @@ var gravity = 900
 var direction
 var jump_velocity = -600
 var shoot_cooldown = false
+var name_weapon : String
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
@@ -75,4 +76,3 @@ func shoot():
 
 func _on_cooldown_timeout():
 	shoot_cooldown = false
-
