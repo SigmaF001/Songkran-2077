@@ -3,7 +3,7 @@ extends Node
 var p_1_score = 0
 var p_2_score = 0
 
-var foods = ["Tomyum", "Padkraproaw"]
+var foods = ["Tomyum", "Somtum"]
 var want_food
 var random = false
 

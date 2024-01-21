@@ -8,12 +8,14 @@ size = Vector2(906, 310)
 
 [node name="WaterGunFullAuto" type="StaticBody2D"]
 scale = Vector2(0.1, 0.1)
+collision_layer = 4
 script = ExtResource("1_qtph7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_qlul6")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(53, 2)

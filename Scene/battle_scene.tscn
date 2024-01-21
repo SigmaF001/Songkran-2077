@@ -372,7 +372,7 @@ horizontal_alignment = 1
 horizontal_alignment = 1
 
 [node name="SpawnItem" parent="." instance=ExtResource("8_f0iip")]
-position = Vector2(-65, 228)
+position = Vector2(36, 228)
 
 [connection signal="timeout" from="TimeFight" to="." method="_on_time_fight_timeout"]
 
