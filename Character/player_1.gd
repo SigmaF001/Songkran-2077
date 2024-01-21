@@ -13,6 +13,7 @@ var direction
 var jump_velocity = -600
 var shoot_cooldown = false
 var name_weapon : String
+var number_bullet : int
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
@@ -31,7 +32,7 @@ func _physics_process(delta):
 	move_and_slide()
 	reverse_gravity()
 	facing_direction()
-	shoot()
+	check_weapon()
 
 func reverse_gravity():
 	if Input.is_action_just_pressed("r_gravity_1"):
@@ -61,18 +62,30 @@ func facing_direction():
 		$Marker2D.rotation = 0
 
 func shoot():
-	if Input.is_action_just_pressed("atk_1") and shoot_cooldown == false:
-		var shoot_bullet = bullet.instantiate()
-		if sprite.flip_h == true:
-			shoot_bullet.direction = Vector2.LEFT
-		if sprite.flip_h == false:
-			shoot_bullet.direction = Vector2.RIGHT
-		shoot_bullet.p_shooter = player_character
-		owner.add_child(shoot_bullet)
-		shoot_bullet.global_position = $Marker2D.global_position
-		$Cooldown.start()
-		shoot_cooldown = true
+	var shoot_bullet = bullet.instantiate()
+	if sprite.flip_h == true:
+		shoot_bullet.direction = Vector2.LEFT
+	if sprite.flip_h == false:
+		shoot_bullet.direction = Vector2.RIGHT
+	shoot_bullet.p_shooter = player_character
+	owner.add_child(shoot_bullet)
+	shoot_bullet.global_position = $Marker2D.global_position
+	$Cooldown.start()
+	shoot_cooldown = true
 
 
 func _on_cooldown_timeout():
 	shoot_cooldown = false
+
+func check_weapon():
+	if (weapon_sprite.texture == preload("res://Asset/Item/water_gun_full_auto.png")):
+		$Cooldown.wait_time = 0.2
+		if Input.is_action_pressed("atk_1") and shoot_cooldown == false:
+			shoot()
+			number_bullet -= 1
+			if number_bullet <= 0:
+				weapon_sprite.texture = preload("res://Asset/Item/GunWater_lv1.png")
+	if (weapon_sprite.texture == preload("res://Asset/Item/GunWater_lv1.png")):
+		$Cooldown.wait_time = 0.5
+		if Input.is_action_just_pressed("atk_1") and shoot_cooldown == false:
+			shoot()

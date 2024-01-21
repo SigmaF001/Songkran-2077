@@ -12,7 +12,7 @@ height = 473.0
 script = ExtResource("1_ffnm5")
 player_character = NodePath(".")
 
-[node name="Sprite2D" type="Sprite2D" parent="." groups=["player"]]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_pywg6")
 flip_h = true
 
