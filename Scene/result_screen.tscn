@@ -32,7 +32,7 @@ size_flags_horizontal = 8
 [node name="ShowP2" type="Label" parent="HBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "Player 1 score : "
+text = "Player 2 score : "
 
 [node name="P2Score" type="Label" parent="HBoxContainer2"]
 layout_mode = 2

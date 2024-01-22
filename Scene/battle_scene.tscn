@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c2v0sqwb23rp6" path="res://Object/platform.tscn" id="3_ud2e4"]
 [ext_resource type="PackedScene" uid="uid://dlj2ml8awuh20" path="res://Character/player_2.tscn" id="4_r8qt2"]
 [ext_resource type="PackedScene" uid="uid://cg20rhsdcm4j0" path="res://UI/canvas_layer.tscn" id="6_x41ir"]
-[ext_resource type="Texture2D" uid="uid://cl5px70svv578" path="res://Asset/Item/Tomyum.png" id="7_3ohw5"]
+[ext_resource type="Texture2D" uid="uid://4hflb1aq51fg" path="res://Asset/Item/Tomyumkung.png" id="7_3ohw5"]
 [ext_resource type="PackedScene" uid="uid://dugl3j0qk8m1c" path="res://System/spawn_item.tscn" id="8_f0iip"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pqxhv"]
@@ -346,10 +346,10 @@ offset_right = 654.0
 offset_bottom = 114.0
 
 [node name="TextureRect" parent="CanvasLayer" index="1"]
-offset_left = 480.0
-offset_top = 24.0
-offset_right = 1632.0
-offset_bottom = 672.0
+offset_left = 489.0
+offset_top = 2.0
+offset_right = 1641.0
+offset_bottom = 650.0
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_3ohw5")
 
