@@ -12,3 +12,7 @@ func _on_area_2d_body_entered(body):
 		body.name_weapon = "GunFullAuto"
 		body.number_bullet = 20
 		queue_free()
+
+
+func _on_delay_timeout():
+	queue_free()

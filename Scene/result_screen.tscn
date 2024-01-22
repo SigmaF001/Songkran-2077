@@ -18,7 +18,7 @@ text = "Player 1 score : "
 [node name="P1Score" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "0
+text = "9000
 "
 vertical_alignment = 1
 
@@ -37,7 +37,7 @@ text = "Player 2 score : "
 [node name="P2Score" type="Label" parent="HBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "900"
+text = "9000"
 vertical_alignment = 1
 
 [node name="Conclusion" type="Label" parent="."]
